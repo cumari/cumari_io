@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>
+    {{ page.title }} - {{ site.title }}
+  </title>
+  <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+
+  <link rel="stylesheet" 
+          href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="post">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+</body>
+</html>

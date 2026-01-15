@@ -1,28 +1,264 @@
----
-layout: default
-title: Home
----
- 
- <h1 id="about">About</h1> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cumari Inspections | Louisiana Home Inspections</title>
+  <meta name="description" content="Cumari Inspections provides reliable, professional home inspections across Louisiana. Licensed, insured, and committed to protecting your investment." />
 
-<p>
-	The Cumari team members have a wide range of experience helping businesses at various stages of growth. We have helped clients find their niche and build successful businesses from the ground up and have worked with Fortune 500 companies with household names. Our goal is to meet your business where you are and grow beside you together.
-</p>
+  <!-- Simple, modern styling -->
+  <style>
+    :root {
+      --primary: #1f3a5f;
+      --secondary: #f4f6f8;
+      --accent: #d97706;
+      --text: #1f2933;
+    }
 
-<h1 id="web_design">Web Design</h1>
+    * {
+      box-sizing: border-box;
+    }
 
-<p>
-	Building the right website for your business is a lot more than making it pretty. I have seen clients spend hundreds of dollars on a site and I've seen clients spend hundreds of thousands of dollars on a website. The first question to ask is what you want your site to do for you, and what is your budget. A website is an investment and if you don't see the right return on your investment, it's not the right website for you.
-</p>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
 
-<h1 id="coaching">Business Coaching</h1>
+    header {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+    }
 
-<p>
-	One of the hardest parts of running a business can be collecting your thoughts and building a plan to success. Our managment team has experience sitting down with business leaders in a wide range of disciplines and guiding them to find places where their business can grow or approaches that are not currently working. Our coaches don't know what is best for your business, but we have the skills to help you look at things differently and see where you need to go.
-</p>
+    header .container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-<h1 id="custom_software">Software Development</h1>
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      letter-spacing: 0.5px;
+    }
 
-<p>
-	Many companies start out keeping track of cutomers, transactions, and inventory on spreadsheets. While this quick solution can be a good solution at the time, it is critical to know when it's time to move to more robust systems.
-</p>
+    header p {
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    nav {
+      margin-top: 0.75rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(31, 58, 95, 0.85), rgba(31, 58, 95, 0.85)), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      padding: 4rem 1rem;
+    }
+
+    .hero .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+    }
+
+    .hero .cta {
+      margin-top: 1.5rem;
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+    }
+
+    .section.alt {
+      background: var(--secondary);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .service-card h4 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .about p {
+      max-width: 800px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 700px;
+    }
+
+    .contact a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0.25rem 0;
+    }
+
+    @media (min-width: 768px) {
+      header .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      nav {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div>
+        <h1>Cumari Inspections</h1>
+        <p style="margin:0.25rem 0 0;font-weight:500;letter-spacing:0.5px;">Home &amp; Building Inspections</p>
+        <p>Home &amp; Building Inspections | Northwest Louisiana</p>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Protecting Your Home Investment</h2>
+      <p>
+        Cumari Inspections provides thorough, unbiased home inspections across Louisiana.
+        Whether you are buying, selling, or maintaining a home, we help you make informed decisions with confidence.
+      </p>
+      <a class="cta" href="#contact">Schedule an Inspection</a>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h3>Inspection Services</h3>
+      <div class="services">
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section alt">
+    <div class="container about">
+      <h3>About Cumari Inspections</h3>
+      <p>
+        Cumari Inspections is a Louisiana-based home inspection company dedicated to accuracy,
+        integrity, and clear communication. We deliver easy-to-understand reports and take the time
+        to explain our findings so you can make confident decisions about your property.
+      </p>
+      <p>
+        Licensed and insured in the state of Louisiana.<br />
+        Licensed Home Inspector #20015
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h3>Contact & Scheduling</h3>
+      <div class="contact">
+        <p>
+          Ready to schedule an inspection or have questions?
+          Reach out today and we’ll be happy to help.
+        </p>
+        <p>
+          Email: <a href="mailto:inspections@cumari.io">inspections@cumari.io</a><br />
+          Office: <a href="tel:+1-318-829-8559">(318) 829-8559</a><br />
+          
+        </p>
+        <p>
+          Service Area: Northwest Louisiana
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Cumari, LLC</p>
+    <p>Licensed & Insured | Louisiana Home Inspector</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

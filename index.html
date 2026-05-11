@@ -44,10 +44,50 @@
     .container { max-width: 1100px; margin: 0 auto; }
 
     header .container {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.site-title h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+}
+
+.veteran-badge {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .header-branding {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .veteran-badge {
+    max-width: 260px;
+  }
+}
+
+@media (min-width:768px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
     nav a {
       color: white;
@@ -140,8 +180,16 @@
 
 <header>
   <div class="container">
-    <div>
-      <h1 style="margin:0;">Cumari Inspections</h1>
+    <div class="header-branding">
+      <div class="site-title">
+        <h1>Cumari Inspections</h1>
+      </div>
+
+      <img
+        class="veteran-badge"
+        src="Veteran Owned Small Business.png"
+        alt="Service-disabled veteran-owned home inspection business serving Shreveport and Bossier City"
+      />
     </div>
   </div>
 </header>
@@ -149,6 +197,7 @@
 <section class="hero">
   <div class="container">
     <h2>Inspecting Houses and Protecting Home Buyers</h>
+    <a class="cta" href="tel:+13188298559">Call Now to Schedule</a>
   </div>
 </section>
 
@@ -175,14 +224,14 @@
         The Air Force sent me to Barksdale AFB over 20 years ago and I have lived here ever since. 
       </p>
       <p>
-        <a href="tel:+13188298559">Call me</a> to discuss special services I offer to military home buyers. I want to make the home buying process as smooth as possible for you, especially if you are relocating to the area for the first time.
+        <a href="tel:+13188298559">Call today</a> to discuss special services I offer to military home buyers. I want to make the home buying process as smooth as possible for you, especially if you are relocating to the area for the first time.
       </p>
   </div>
 </section>
 
 <section id="contact" class="section alt">
   <div class="container" style="text-align:center;">
-    <a class="cta" target="_blank" href="https://app.spectora.com/home-inspectors/my-inspection-company-1a24eb7583/schedule">Schedule Online</a>
+    <a class="cta" href="tel:+13188298559">Call Now to Schedule</a>
   </div>
 </section>
 
